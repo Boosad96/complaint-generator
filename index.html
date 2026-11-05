@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-Jagriti &amp; RERA Complaint Draft Generator — Find Your Forum, Fee &amp; Steps</title>
+<meta name="description" content="Free wizard: find the right consumer forum or RERA route, the exact filing fee, and the steps to file — plus a free complaint draft. NCH 1915 first, then e-Jagriti or your state RERA portal.">
+<link rel="canonical" href="https://complaints.paychaserhq.com/">
+<link rel="stylesheet" href="/styles.css">
+<script defer src="/app.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which forum hears my consumer complaint?","acceptedAnswer":{"@type":"Answer","text":"It depends on what you paid as consideration: up to ₹50 lakh — District Commission; above ₹50 lakh to ₹2 crore — State Commission; above ₹2 crore — National Commission. The compensation you claim does not decide the forum."}},{"@type":"Question","name":"What does it cost to file?","acceptedAnswer":{"@type":"Answer","text":"Nothing, if what you paid is up to ₹5 lakh. Above that the fee runs from ₹200 to ₹7,500 depending on what you paid, under the 2020 Rules as amended in 2023."}},{"@type":"Question","name":"Do I need a lawyer to file?","acceptedAnswer":{"@type":"Answer","text":"No. You can file on e-Jagriti yourself as a party-in-person. The fee is nil for most everyday claims, and the portal walks you through it."}},{"@type":"Question","name":"Should I try the National Consumer Helpline first?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call 1915 or file at consumerhelpline.gov.in. It is free, and many refunds are settled at this pre-litigation stage within about 30 days. If it does not work, file with the Consumer Commission."}},{"@type":"Question","name":"Is this legal advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is a free reference tool. Verify every fee and form on the official portal before filing, and consult an advocate for your own facts."}}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">Complaint Generator <span>e-Jagriti &amp; RERA</span></a>
+<nav><a href="/wizard/">Find your route</a><a href="/fees/">Fee calculator</a><a href="/checklist/">Checklist</a><a href="/draft/">Free draft</a><a href="/rera/">RERA</a><a href="/nch/">NCH 1915</a><a href="/sources/">Sources</a></nav>
+</div></header>
+<main class="wrap">
+<h1>e-Jagriti &amp; RERA Complaint Draft Generator</h1>
+<p class="lede">Turn your story into a filing-ready complaint. Answer 4 questions and get the right forum, the exact filing fee, and the steps to file — for consumer goods and services on e-Jagriti, and for delayed flats and builder refunds on RERA. Free, no login, nothing you type leaves your browser.</p>
+<section class="lawbox"><h2>Find your route — 4 questions</h2>
+<form id="wizard" onsubmit="return false">
+<fieldset><legend>1. What happened?</legend>
+<label><input type="radio" name="problem" value="consumer-ecommerce" required> Online shopping — refund not received, order not delivered, or a defective product (Flipkart, Amazon, Meesho…)</label>
+<label><input type="radio" name="problem" value="consumer-service"> Service problem — airline, telecom, broadband, hospital bill, or another service</label>
+<label><input type="radio" name="problem" value="rera-delay"> Builder delayed the flat — possession date has passed</label>
+<label><input type="radio" name="problem" value="rera-refund"> Builder project stalled — I want out and a full refund</label>
+<label><input type="radio" name="problem" value="consumer-other"> Something else I bought or paid for</label></fieldset>
+<fieldset><legend>2. How much did you pay for it? (in ₹)</legend>
+<input type="number" id="wizard-amount" min="1" step="1" placeholder="e.g. 25000" inputmode="numeric" required>
+<p class="small">The forum and the fee are both decided by what you <strong>paid as consideration</strong> — not by the compensation you claim.</p></fieldset>
+<fieldset id="wizard-state-wrap" hidden><legend>3. Which state is the property in?</legend>
+<select id="wizard-state"></select>
+<p class="small">RERA is state-wise. The portal is picked by where the <strong>property</strong> is, not where you live.</p></fieldset>
+<fieldset id="wizard-rera-want" hidden><legend>4. What do you want?</legend>
+<label><input type="radio" name="rera_want" value="refund"> Refund, interest, or possession of the flat</label>
+<label><input type="radio" name="rera_want" value="compensation"> Compensation for my loss (beyond interest/refund)</label></fieldset>
+<fieldset id="wizard-date-wrap"><legend>3. When did the problem happen?</legend>
+<input type="date" id="wizard-date">
+<p class="small">Consumer complaints must be filed within 2 years of the problem (Section 69, Consumer Protection Act, 2019).</p></fieldset>
+<button class="btn" type="button" id="wizard-go">Find my route</button>
+</form>
+<div id="wizard-result" aria-live="polite"></div></section>
+<section>
+<h2>How much will filing cost?</h2>
+
+<form id="fee-calc" onsubmit="return false">
+<fieldset><legend>How much did you pay for the goods or service? (in ₹)</legend>
+<input type="number" id="fee-amount" min="1" step="1" placeholder="e.g. 25000" inputmode="numeric" required>
+<button class="btn" type="submit">Calculate fee</button></fieldset>
+</form>
+<div id="fee-result" aria-live="polite"></div>
+<p><a href="/fees/">See the full fee table →</a></p>
+</section>
+<section>
+<h2>Most common cases</h2>
+<div class="grid"><a class="card" href="/scenario/flipkart-refund/"><strong>Flipkart / Amazon / Meesho refund complaint</strong><span>Refund not received after a return or cancellation on an e-commerce pl…</span></a><a class="card" href="/scenario/defective-product/"><strong>Defective product complaint</strong><span>A product that is defective, damaged, spurious, or not as described — …</span></a><a class="card" href="/scenario/not-delivered/"><strong>Order paid but never delivered</strong><span>Goods paid for but never delivered — or marked delivered when they wer…</span></a><a class="card" href="/scenario/delayed-possession/"><strong>Builder delayed flat possession — RERA complaint</strong><span>A promoter who fails to hand over possession by the date agreed in the…</span></a><a class="card" href="/scenario/builder-refund/"><strong>Builder refund — withdraw from the project</strong><span>Withdrawing from a stalled or endlessly delayed project and claiming a…</span></a><a class="card" href="/scenario/airline-refund/"><strong>Flight cancelled — airline refund complaint</strong><span>A cancelled or significantly delayed flight where the airline refuses …</span></a><a class="card" href="/scenario/telecom-billing/"><strong>Wrong mobile / broadband bill complaint</strong><span>Incorrect billing, unauthorised charges, or a deficient telecom/broadb…</span></a><a class="card" href="/scenario/hospital-billing/"><strong>Hospital overbilling complaint</strong><span>A hospital bill that charges for services, medicines or tests not prov…</span></a></div>
+</section>
+<section class="lawbox">
+<h2>Start free: try the National Consumer Helpline first</h2>
+<p>Before any filing, register the grievance with the <strong>National Consumer Helpline</strong> — call <strong>1915</strong> (8 AM–8 PM) or file at <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener">consumerhelpline.gov.in</a>. It is free, it works in 17 languages, and the company gets a deadline to respond. If it does not work, the Consumer Commission is the next step. <a href="/nch/">What the NCH can and cannot do →</a></p>
+</section>
+<section>
+<h2>Why people file — the numbers</h2>
+<ul class="stats">
+<li><strong>20.49 lakh complaints to the National Consumer Helpline in 2025-26 — up from 12.36 lakh in 2023-24 and 13.16 lakh in 2024-25</strong></li>
+<li><strong>5,77,748 e-commerce complaints in 2025-26 — Flipkart 1,33,566; Amazon 91,248; Meesho 29,284</strong></li>
+<li><strong>₹105 crore+ in refunds facilitated by the NCH at the pre-litigation stage</strong></li>
+<li><strong>1.47 lakh RERA complaints disposed nationally by September 2025 — UP RERA ~60,021; MahaRERA 37,520; Karnataka 13,513</strong></li>
+</ul>
+<p class="small">Sources: <a href="https://kashmirlife.net/consumer-complaints-from-jammu-kashmir-rise-78-per-cent-in-three-years-all-cases-resolved-centre-tells-lok-sabha-446604/" target="_blank" rel="noopener">Kashmir Life — NCH complaint numbers (Lok Sabha)</a>, <a href="https://indianexpress.com/article/legal-news/consumers-20-lakh-complaints-e-commerce-platforms-5-years-10832528/" target="_blank" rel="noopener">Indian Express — 20 lakh e-commerce complaints</a>, <a href="https://newsonair.gov.in/national-consumer-helpline-facilitates-refunds-of-more-than-105-cr-rupees-at-pre-litigation-stage/" target="_blank" rel="noopener">All India Radio — NCH facilitated ₹105 crore+ refunds</a>, <a href="https://blog.ipleaders.in/rera-complaint-procedure-2026-step-by-step-guide/" target="_blank" rel="noopener">iPleaders — RERA complaint procedure 2026</a></p>
+</section>
+<section>
+<h2>What this tool covers</h2>
+<ul class="stats">
+<li><strong>3 consumer forums</strong> with the current limits (2021 Rules) and the full 11-slab fee table</li>
+<li><strong>2 RERA routes</strong> — Authority (refund / interest / possession) and Adjudicating Officer (compensation)</li>
+<li><strong>10 state RERA portals</strong> with forms and fees where verified</li>
+<li><strong>8 scenario guides</strong> with steps, documents and FAQs</li>
+<li><strong>Free draft preview</strong> — a structured complaint you can print; the full filing-ready pack (affidavit draft, annexure index, formatted documents) is coming as a paid pack</li>
+</ul>
+</section>
+<section>
+<h2>Frequently asked questions</h2>
+<dl class="faq"><dt>Which forum hears my consumer complaint?</dt><dd>It depends on what you paid as consideration: up to ₹50 lakh — District Commission; above ₹50 lakh to ₹2 crore — State Commission; above ₹2 crore — National Commission. The compensation you claim does not decide the forum.</dd><dt>What does it cost to file?</dt><dd>Nothing, if what you paid is up to ₹5 lakh. Above that the fee runs from ₹200 to ₹7,500 depending on what you paid, under the 2020 Rules as amended in 2023.</dd><dt>Do I need a lawyer to file?</dt><dd>No. You can file on e-Jagriti yourself as a party-in-person. The fee is nil for most everyday claims, and the portal walks you through it.</dd><dt>Should I try the National Consumer Helpline first?</dt><dd>Yes. Call 1915 or file at consumerhelpline.gov.in. It is free, and many refunds are settled at this pre-litigation stage within about 30 days. If it does not work, file with the Consumer Commission.</dd><dt>Is this legal advice?</dt><dd>No. This is a free reference tool. Verify every fee and form on the official portal before filing, and consult an advocate for your own facts.</dd></dl>
+</section>
+<aside class="disclaimer" role="note"><strong>Not legal advice.</strong> This is a free reference tool built from official portals and published guides. Every fee, limit and procedure shown as verified was checked against at least two independent published sources (or an official government source), and each page links to its sources so you can check it yourself. Forum rules, fees and forms change, and RERA procedures differ by state — always confirm the current form and fee on the official portal (e-Jagriti or your state RERA portal) before filing. If a row is marked “confirm on portal”, do not rely on it without checking.</aside></main>
+<footer class="wrap"><p>Free reference tool. Built from official portals and published guides; every verified row cites its sources. <a href="/sources/">How we verify</a> · <a href="https://e-jagriti.gov.in" target="_blank" rel="noopener">e-Jagriti</a> · <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener">National Consumer Helpline</a></p>
+<p class="small">Consumer complaints are filed under the Consumer Protection Act, 2019 (forum limits fixed by the 2021 Rules). Real-estate complaints are filed under the RERA Act, 2016 with your state RERA authority.</p></footer>
+</body></html>

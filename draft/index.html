@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Complaint Draft — Preview &amp; Print</title>
+<meta name="description" content="Fill in your details and generate a structured consumer complaint draft you can print — free, in your browser, nothing leaves your device.">
+<link rel="canonical" href="https://complaints.paychaserhq.com/draft/">
+<link rel="stylesheet" href="/styles.css">
+<script defer src="/app.js"></script>
+
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">Complaint Generator <span>e-Jagriti &amp; RERA</span></a>
+<nav><a href="/wizard/">Find your route</a><a href="/fees/">Fee calculator</a><a href="/checklist/">Checklist</a><a href="/draft/">Free draft</a><a href="/rera/">RERA</a><a href="/nch/">NCH 1915</a><a href="/sources/">Sources</a></nav>
+</div></header>
+<main class="wrap">
+<h1>Free complaint draft — preview</h1>
+<p class="lede">Fill in your details and get a structured complaint draft you can print. It runs entirely in your browser — nothing you type is sent anywhere or stored.</p>
+<form id="draft-form" onsubmit="return false">
+<fieldset><legend>Your details (complainant)</legend>
+<label>Your full name <input type="text" id="d-name" placeholder="e.g. Abhishek Debsharma"></label>
+<label>Your address <textarea id="d-addr" placeholder="House no., street, city, PIN"></textarea></label></fieldset>
+<fieldset><legend>Opposite party (seller / company / builder)</legend>
+<label>Full legal name <input type="text" id="d-opname" placeholder="e.g. Flipkart Internet Pvt. Ltd."></label>
+<label>Address (registered office if you know it) <textarea id="d-opaddr" placeholder="Registered office address"></textarea></label></fieldset>
+<fieldset><legend>What happened</legend>
+<label>What did you buy / pay for? <input type="text" id="d-product" placeholder="e.g. Samsung Galaxy M34 5G, Order ID OD123456"></label>
+<label>Amount paid (₹) <input type="text" id="d-amount" placeholder="e.g. 15999" inputmode="numeric"></label>
+<label>Date of purchase / payment <input type="date" id="d-pdate"></label>
+<label>Date the problem arose <input type="date" id="d-cdate"></label>
+<label>What happened — the facts, in date order <textarea id="d-facts" placeholder="e.g. Ordered on 12 March 2026. Delivered on 15 March with a cracked screen. Raised a return the same day; pickup was done on 18 March but the refund never came. Support ticket 456789 closed without resolution on 2 April 2026."></textarea></label>
+<label>What relief do you want? <textarea id="d-relief" placeholder="e.g. Full refund of ₹15,999, compensation for harassment, and the cost of filing."></textarea></label>
+<label>Compensation claimed, if any (₹) <input type="text" id="d-comp" placeholder="e.g. 25000" inputmode="numeric"></label></fieldset>
+<button class="btn" type="button" id="draft-go">Generate my draft</button>
+</form>
+<div id="draft-output" aria-live="polite"></div>
+<section class="warnbox"><h2>What this free preview does — and does not — include</h2>
+<p><strong>Included:</strong> a structured complaint draft with the parties, the facts, the relief sought and a verification clause, plus the forum picked by what you paid. Print it or save it as a PDF.</p>
+<p><strong>Not included (coming as a paid pack):</strong> the notarised-affidavit draft, the annexure index with your documents in order, the synopsis with dates and events, and the memo of parties as formatted, filing-ready documents. The paid pack will be $5 (consumer) / $9 (RERA) in USDT — the same checkout as Invoice Chaser.</p>
+<p>Before filing, check every fact and amount, attach the evidence from the <a href="/checklist/">filing checklist</a>, and get the affidavit notarised. This draft is not legal advice.</p></section>
+<aside class="disclaimer" role="note"><strong>Not legal advice.</strong> This is a free reference tool built from official portals and published guides. Every fee, limit and procedure shown as verified was checked against at least two independent published sources (or an official government source), and each page links to its sources so you can check it yourself. Forum rules, fees and forms change, and RERA procedures differ by state — always confirm the current form and fee on the official portal (e-Jagriti or your state RERA portal) before filing. If a row is marked “confirm on portal”, do not rely on it without checking.</aside></main>
+<footer class="wrap"><p>Free reference tool. Built from official portals and published guides; every verified row cites its sources. <a href="/sources/">How we verify</a> · <a href="https://e-jagriti.gov.in" target="_blank" rel="noopener">e-Jagriti</a> · <a href="https://consumerhelpline.gov.in" target="_blank" rel="noopener">National Consumer Helpline</a></p>
+<p class="small">Consumer complaints are filed under the Consumer Protection Act, 2019 (forum limits fixed by the 2021 Rules). Real-estate complaints are filed under the RERA Act, 2016 with your state RERA authority.</p></footer>
+</body></html>

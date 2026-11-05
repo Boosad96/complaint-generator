@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://complaints.paychaserhq.com/sitemap.xml
